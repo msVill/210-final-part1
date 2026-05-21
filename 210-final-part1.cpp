@@ -45,15 +45,20 @@ int main() {
     }
     cout << endl;
 
-    void printAirportsInRange(const map<string, int>& airports, int low, int high) {
+    printAirportsInRange(airportData, 3, 7);
+    cout << endl;
+    printAirportsInRange(airportData, 15, 30);
+
+    return 0;
+}
+
+void printAirportsInRange(const map<string, int>& airports, int low, int high) {
         cout << "Airports with traffic in range [" 
             << low << ", " << high << "]:" << endl;
 
             for(const auto& item : airports) {
-                if(item.second >= low && item.seconf <= high) {
+                if(item.second >= low && item.second <= high) {
                     cout << item.first << " " << item.second << endl;
                 }
             }
     }
-    return 0;
-}
