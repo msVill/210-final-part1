@@ -37,11 +37,13 @@ int main() {
         }
     }
 
+    cout << "Busiest airport(s) with count " << maxCount << ":" << endl;
     // now, handle ties
     for(const auto& item : airportData) {
         if(item.second == maxCount) {
-            
+            cout << item.first << " " << item.second << endl;
         }
     }
+    cout << endl;
     return 0;
 }
