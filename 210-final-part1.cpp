@@ -25,8 +25,7 @@ int main() {
 
     cout << "All airport traffic counts:" << endl;
     for(const auto& item : airportData) {
-        auto aiport = item.first;
-        auto count = item.second;
+        cout << item.first << item.second << endl;
         
     }
 
