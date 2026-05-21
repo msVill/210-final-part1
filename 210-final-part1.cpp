@@ -18,10 +18,17 @@ int main() {
     string origin, destination;
     while (file >> origin >> destination) {
         airportData[origin]++;
-        airportData[destination]++; //What's next.. read the file.. for each flight, insert
+        airportData[destination]++; 
     }
 
     file.close();
+
+    cout << "All airport traffic counts:" << endl;
+    for(const auto& item : airportData) {
+        auto aiport = item.first;
+        auto count = item.second;
+        
+    }
 
     return 0;
 }
