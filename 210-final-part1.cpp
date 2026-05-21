@@ -25,9 +25,9 @@ int main() {
 
     cout << "All airport traffic counts:" << endl;
     for(const auto& item : airportData) {
-        cout << item.first << item.second << endl;
-        
+        cout << item.first << " " << item.second << endl;
     }
+    cout << endl;
 
     return 0;
 }
