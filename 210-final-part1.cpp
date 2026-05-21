@@ -29,5 +29,19 @@ int main() {
     }
     cout << endl;
 
+    //find the highest traffic count
+    int maxCount = 0;
+    for(const auto& item : airportData) {
+        if(item.second > maxCount) {
+            maxCount = item.second;
+        }
+    }
+
+    // now, handle ties
+    for(const auto& item : airportData) {
+        if(item.second == maxCount) {
+            
+        }
+    }
     return 0;
 }
