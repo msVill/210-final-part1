@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+void printAirportsInRange(const map<string, int>& airports, int low, int high);
 
 int main() {
     map<string, int> airportData;
@@ -29,7 +30,6 @@ int main() {
     }
     cout << endl;
 
-    //find the highest traffic count
     int maxCount = 0;
     for(const auto& item : airportData) {
         if(item.second > maxCount) {
@@ -38,12 +38,22 @@ int main() {
     }
 
     cout << "Busiest airport(s) with count " << maxCount << ":" << endl;
-    // now, handle ties
     for(const auto& item : airportData) {
         if(item.second == maxCount) {
             cout << item.first << " " << item.second << endl;
         }
     }
     cout << endl;
+
+    void printAirportsInRange(const map<string, int>& airports, int low, int high) {
+        cout << "Airports with traffic in range [" 
+            << low << ", " << high << "]:" << endl;
+
+            for(const auto& item : airports) {
+                if(item.second >= low && item.seconf <= high) {
+                    cout << item.first << " " << item.second << endl;
+                }
+            }
+    }
     return 0;
 }
